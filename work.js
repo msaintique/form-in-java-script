@@ -70,27 +70,32 @@ let button=document.createElement("input");
 button.setAttribute("type","submit");
 button.classList.add("button");
 form.appendChild(button);
-let address={
-    FirstName:"saintique",
-    LastName:"Mutozimana",
-    YourEmail:"msaintique@gmail.com",
-    Password:"12sd",
-};
-function myObject(fname,lname,email,password){
+
+function Object(fname,lname,email,password){
  this.fname=fname;
    this.lname=lname;
    this.email=email;
     this.password=password;
 }
-console.log(myObject);
-console.log(address);
-for(let id in myObject){
-console.log(`${id}:${myObject[id]}`);
-}
 button.addEventListener("click",function(m){
- m.preventDefault();
-alert("button was clicked");
+    m.preventDefault();
+    let address=new Object(fname.value,lname.value,email.value,password.value);
+    for(let id in address){
+        console.log(`${id}:${address[id]}`);
+    }
+ 
 })
+
+
+
+// console.log(myObject);
+
+// for(let id in myObject){
+// console.log(`${id}:${myObject[id]}`);
+// }
+// button.addEventListener("click",function(m){
+//  m.preventDefault();
+// })
 
  
 
