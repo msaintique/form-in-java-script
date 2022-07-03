@@ -80,6 +80,10 @@ function Object(fname,lname,email,password){
 button.addEventListener("click",function(m){
     m.preventDefault();
     let address=new Object(fname.value,lname.value,email.value,password.value);
+    fname.value="";
+    lname.value="";
+    email.value="";
+    password.value="";
     for(let id in address){
         console.log(`${id}:${address[id]}`);
     }
